@@ -1,0 +1,81 @@
+ /* Form Styles */
+        form {
+            max-width: 600px;
+            margin: 20px auto; /* Added some top/bottom margin */
+            padding: 20px; /* Added some padding around the form */
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 10px;
+            border: 1px solid #ddd; /* Added a subtle border */
+            border-radius: 8px; /* Added rounded corners */
+            background-color: #f9f9f9; /* Added a light background */
+        }
+
+        form h2 {
+            grid-column: span 2;
+            text-align: center;
+            color: #333; /* Darker heading color */
+            margin-bottom: 20px; /* More space below heading */
+        }
+
+        label {
+            text-align: right;
+            padding-right: 10px;
+            font-weight: bold; /* Make labels bold */
+            color: #555; /* Slightly darker label color */
+        }
+
+        input[type="text"],
+        input[type="tel"],
+        input[type="email"],
+        input[type="password"],
+        textarea {
+            padding: 10px; /* Increased padding */
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1em; /* Slightly larger font size */
+        }
+
+        textarea {
+            resize: vertical; /* Allow vertical resizing */
+        }
+
+        button {
+            grid-column: span 2;
+            background-color: #555; /* Updated button color */
+            color: white;
+            border: none;
+            border-radius: 15px;
+            box-shadow: 3px 3px 5px #999;
+            padding: 12px; /* Increased padding */
+            font-size: 1em; /* Slightly larger font size */
+            cursor: pointer;
+            transition: background-color 0.3s ease; /* Smooth hover transition */
+        }
+
+        button:hover {
+            background-color: #333; /* Darker hover color */
+        }
+
+        .error-message {
+            color: red;
+            font-size: 0.9em;
+            grid-column: span 2;
+            margin-top: 5px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            form {
+                grid-template-columns: 1fr;
+            }
+
+            label {
+                text-align: left;
+                padding-right: 0;
+            }
+
+            button {
+                grid-column: span 1;
+            }
+        }

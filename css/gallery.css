@@ -1,0 +1,31 @@
+ .image-gallery {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr); /* Creates 4 equal columns */
+            grid-row-gap: 15px; /* Spacing between rows */
+            grid-column-gap: 15px; /* Spacing between columns */
+            padding: 20px;
+        }
+
+        .gallery-item {
+            overflow: hidden; /* Ensures images don't spill out of their container */
+            border-radius: 8px; /* Optional: Adds rounded corners */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow */
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            display: block; /* Prevents extra space below the image */
+            transition: transform 0.3s ease-in-out; /* Smooth hover effect */
+        }
+
+        .gallery-item img:hover {
+            transform: scale(1.05); /* Slight zoom on hover */
+        }
+
+        /* Optional: Responsive adjustments for smaller screens */
+        @media (max-width: 768px) {
+            .image-gallery {
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Adjust columns for smaller screens */
+            }
+        }
