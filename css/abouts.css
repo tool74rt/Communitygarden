@@ -207,6 +207,24 @@ footer {
     margin-bottom: 15px;
 }
 
+/* Map Styling */
+    .map-responsive {
+      overflow: hidden;
+      padding-bottom: 56.25%; /* 16:9 aspect ratio for responsiveness */
+      position: relative;
+      height: 0;
+    }
+
+    .map-responsive iframe {
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+    }
+
+
+
 .social-media {
     list-style: none;
     padding: 0;
