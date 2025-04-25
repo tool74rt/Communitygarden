@@ -11,6 +11,16 @@ function showHeroSlide(index) {
     });
 }
 
+function setElementStyles(element, styles) {
+    return new Promise((resolve) => {
+        Object.keys(styles).forEach((key) => {
+            element.style[key] = styles[key];
+        });
+        resolve();
+    });
+}
+
+
 function nextHeroSlide() {
     currentSlide = (currentSlide + 1) % heroSlides.length;
     showHeroSlide(currentSlide);
@@ -19,6 +29,7 @@ function nextHeroSlide() {
 // Initialize the slideshow
 showHeroSlide(currentSlide);
 setInterval(nextHeroSlide, slideInterval);
+
 
 
 
